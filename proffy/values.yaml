@@ -8,7 +8,7 @@ image:
 secrets:
   - name: proffy-secrets
     data:
-      DATABASE_URL: "cG9zdGdyZXNxbDovL3Bvc3RncmVzLnR4aGV0ZW5iaHF4b3RraGt4Y2d5Ong1elBBeFhjQnpjdkRWY0JAYXdzLTEtdXMtZWFzdC0xLnBvb2xlci5zdXBhYmFzZS5jb206NjU0My9wb3N0Z3Jlcwo="
+      DATABASE_URL: cG9zdGdyZXNxbDovL3Bvc3RncmVzLnR4aGV0ZW5iaHF4b3RraGt4Y2d5Ong1elBBeFhjQnpjdkRWY0JAYXdzLTEtdXMtZWFzdC0xLnBvb2xlci5zdXBhYmFzZS5jb206NjU0My9wb3N0Z3Jlcz9zc2xtb2RlPXJlcXVpcmUK
       JWT_TOKEN: "YmM4YjY3YWUtMmNmOC00YWNlLTg4NjEtMmIyMDgzYjY2ZWJmCg=="
       COOKIE_SECRET: "YmM4YjY3YWUtMmNmOC00YWNlLTg4NjEtMmIyMDgzYjY2ZWJmCg=="
       NODE_ENV: "staging"
