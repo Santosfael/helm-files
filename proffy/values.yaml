@@ -6,18 +6,12 @@ image:
   tag: "b3658c7"
 
 secrets:
-  - name: DATABASE_URL
+  - name: proffy-secrets
     data:
-      url: "cG9zdGdyZXNxbDovL3Bvc3RncmVzLnR4aGV0ZW5iaHF4b3RraGt4Y2d5Ong1elBBeFhjQnpjdkRWY0JAYXdzLTEtdXMtZWFzdC0xLnBvb2xlci5zdXBhYmFzZS5jb206NjU0My9wb3N0Z3Jlcwo="
-  - name: JWT_TOKEN
-    data:
-      key: "YmM4YjY3YWUtMmNmOC00YWNlLTg4NjEtMmIyMDgzYjY2ZWJmCg=="
-  - name: COOKIE_SECRET
-    data:
-      cookie: "YmM4YjY3YWUtMmNmOC00YWNlLTg4NjEtMmIyMDgzYjY2ZWJmCg=="
-  - name: NODE_ENV
-    data:
-      value: "production"
+      DATABASE_URL: "cG9zdGdyZXNxbDovL3Bvc3RncmVzLnR4aGV0ZW5iaHF4b3RraGt4Y2d5Ong1elBBeFhjQnpjdkRWY0JAYXdzLTEtdXMtZWFzdC0xLnBvb2xlci5zdXBhYmFzZS5jb206NjU0My9wb3N0Z3Jlcwo="
+      JWT_TOKEN: "YmM4YjY3YWUtMmNmOC00YWNlLTg4NjEtMmIyMDgzYjY2ZWJmCg=="
+      COOKIE_SECRET: "YmM4YjY3YWUtMmNmOC00YWNlLTg4NjEtMmIyMDgzYjY2ZWJmCg=="
+      NODE_ENV: "staging"
 
 imagePullSecrets: []
 nameOverride: ""
