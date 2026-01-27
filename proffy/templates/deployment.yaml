@@ -45,19 +45,19 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: app-secrets
-                  key: DATABASE_URL
+                  key: database-url
 
             - name: JWT_TOKEN
               valueFrom:
                 secretKeyRef:
                   name: app-secrets
-                  key: JWT_TOKEN
+                  key: jwt-token
 
             - name: COOKIE_SECRET
               valueFrom:
                 secretKeyRef:
                   name: app-secrets
-                  key: COOKIE_SECRET
+                  key: cookie-secret
 
             - name: NODE_ENV
               valueFrom:
