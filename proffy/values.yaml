@@ -1,0 +1,87 @@
+replicaCount: 2
+
+image:
+  repository: santosfael/api-proffy
+  pullPolicy: Always
+  tag: "b3658c7"
+  port: 3333
+
+secrets:
+  - name: DATABASE_URL
+    data:
+      url: cG9zdGdyZXNxbDovL3Bvc3RncmVzLnR4aGV0ZW5iaHF4b3RraGt4Y2d5Ong1elBBeFhjQnpjdkRWY0JAYXdzLTEtdXMtZWFzdC0xLnBvb2xlci5zdXBhYmFzZS5jb206NjU0My9wb3N0Z3Jlcwo=
+  - name: JWT_TOKEN
+    data:
+      key: YmM4YjY3YWUtMmNmOC00YWNlLTg4NjEtMmIyMDgzYjY2ZWJmCg==
+  - name: COOKIE_SECRET
+    data:
+      cookie: YmM4YjY3YWUtMmNmOC00YWNlLTg4NjEtMmIyMDgzYjY2ZWJmCg==
+  - name: NODE_ENV
+    data:
+      value: "production"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  automount: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+podLabels: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 400m
+    memory: 512Mi
+
+# livenessProbe:
+#   httpGet:
+#     path: /
+#     port: http
+# readinessProbe:
+#   httpGet:
+#     path: /
+#     port: http
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 4
+  # targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 75
+
+volumes: []
+
+volumeMounts: []
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
