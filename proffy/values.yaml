@@ -1,35 +1,27 @@
 replicaCount: 2
-
 image:
   repository: santosfael/api-proffy
   pullPolicy: Always
-  tag: "6dde19d"
-
+  tag: 67b2ee1
 imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
-
+nameOverride: ''
+fullnameOverride: ''
 serviceAccount:
   create: true
   automount: true
   annotations: {}
-  name: ""
-
+  name: ''
 podAnnotations: {}
 podLabels: {}
-
 podSecurityContext: {}
-
 securityContext: {}
-
 service:
   type: ClusterIP
   port: 80
   targetPort: 3333
-
 ingress:
   enabled: false
-  className: ""
+  className: ''
   annotations: {}
   hosts:
     - host: chart-example.local
@@ -37,7 +29,6 @@ ingress:
         - path: /
           pathType: ImplementationSpecific
   tls: []
-
 resources:
   limits:
     cpu: 400m
@@ -45,29 +36,13 @@ resources:
   requests:
     cpu: 200m
     memory: 256Mi
-
-# livenessProbe:
-#   httpGet:
-#     path: /
-#     port: http
-# readinessProbe:
-#   httpGet:
-#     path: /
-#     port: http
-
 autoscaling:
   enabled: true
   minReplicas: 2
   maxReplicas: 4
-  # targetCPUUtilizationPercentage: 80
   targetMemoryUtilizationPercentage: 75
-
 volumes: []
-
 volumeMounts: []
-
 nodeSelector: {}
-
 tolerations: []
-
 affinity: {}
