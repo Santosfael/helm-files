@@ -2,7 +2,7 @@ replicaCount: 2
 image:
   repository: santosfael/api-proffy
   pullPolicy: Always
-  tag: 67b2ee1
+  tag: 766d5d9
 imagePullSecrets: []
 nameOverride: ''
 fullnameOverride: ''
